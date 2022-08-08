@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset= "UTF-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	</head>
+	<body>
+	
+	    <div class="container">
+	        <div class="row"
+	            style="display: flex; align-items:center; justify-content: center; width: 70%; margin-top: 5%;">
+	            <div class="col s12">
+	                <div class="card red darken-4" style="border-radius:20px;">
+	                    <h1 class="white-text" style="font-weight: 300; margin: 0 0 1% 5%; padding-top: 5%;">Consulta:</h1>
+	                    <hr class="white-text">
+	                    <div class="card-content white-text">
+					        <table>
+								<thead>
+									<tr>
+										<th>Id</th>
+										<th>Autor</th>
+										<th>Titulo</th>
+										<th>Ações</th>		
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="livro: ${livros}">
+										<td th:text="*{livro.id}"/>
+										<td th:text="*{livro.autor}"/>
+										<td th:text="*{livro.titulo}"/>
+										<td><a class="white-text" th:href="@{'/consulta/'+${livro.id}}">editar</a></td>
+										<td><a class="white-text "th:href="@{'/delete/'+${livro.id}}">excluir</a></td>
+									</tr>
+								</tbody>
+							</table>
+							<div>
+					        	<a class="waves-effect waves-light btn red lighten-1 right" th:href="@{/cadastro}">Cadastro</a>
+							</div>
+	                    </div>
+	                </div>
+	            </div>
+	         </div>
+	     </div>
+	</body>
+</html>

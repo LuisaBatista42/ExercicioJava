@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset= "UTF-8">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	</head>
+	<body>
+		<div class="container">
+			  <div class="row" style="display: flex; align-items:center; justify-content: center; width: 70%; margin-top: 5%;" >
+			    <div class="col s12">
+			      <div class="card red darken-4" style="height:350px; border-radius:20px;">
+			          <h1 class="white-text" style="font-weight: 300; margin: 0 0 1% 5%; padding-top: 5%;">Biblioteca</h1>
+			          <hr class="white-text">
+			      <div style="display: flex; align-items:center; justify-content: space-between; margin-top:5%;">
+			        <div class="card-content white-text">
+			          <p> Um local para arquivar os seus livros favoritos.</p>
+			        </div>
+			        <div class="card-action">
+						<a class="waves-effect waves-light btn red lighten-1" style="margin: 25px 0 0 10%;" th:href="@{/cadastro}">Cadastro</a>
+						<a class="waves-effect waves-light btn red lighten-1" style="margin: 25px 0 0 10%;" th:href="@{/consulta}">Consulta</a>	
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+		</div>
+	</body>
+</html>
